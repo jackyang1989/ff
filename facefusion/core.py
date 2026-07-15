@@ -42,8 +42,6 @@ def cli() -> None:
 def route(args : Args) -> None:
 	system_memory_limit = state_manager.get_item('system_memory_limit')
 
-	if system_memory_limit and system_memory_limit > 0:
-		limit_system_memory(system_memory_limit)
 
 	if state_manager.get_item('command') == 'force-download':
 		error_code = force_download()
